@@ -17,7 +17,17 @@ def read_data():
     print("After updation")
     print(df.head())
 
+    ''' binning the age data to get ordinal attribute instead'''
+    agebin = pd.cut(df.loc[:,1],bins=5,labels=range(1, 6), retbins=False,include_lowest=True)
+    df.loc[:,1]=agebin
+    print(df.head())
+
+
 def main():
     read_data()
+
+    
+
 if __name__ == '__main__':
     main()
+
