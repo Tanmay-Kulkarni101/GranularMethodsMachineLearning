@@ -1,3 +1,11 @@
+'''
+Input: Dataframe of the form [X Y]
+where X consists of all the input features
+and Y consists of all the label values
+Output: 2 Dictionaries
+granules contains the granules present within the dataset
+labels contains the labels for each granule present within the dataset
+'''
 from sklearn import tree
 import read_data
 import pandas as pd
@@ -20,8 +28,9 @@ def main():
    
     leaf_list = answer.tree_.apply(X) # excluding the last col
 
-    granules = {}
-    labels = {}
+    granules = {} # dict to represent the granule
+    labels = {} # dict to represent the label for a granule
+    ## Node each granule has a unique label
 
     index = 0
 
@@ -30,15 +39,16 @@ def main():
     print("Creating the dict")
     for leaf_index in leaf_list:
         if(leaf_index not in granules.keys()):
-            granules[leaf_index] = X[index]
-            labels[leaf_index] = answer.predict( np.reshape(X[index],(1,X[index].shape[0]) ) )
+            granules[leaf_index] = X[index] # init first granule
+            labels[leaf_index] = answer.predict( np.reshape(X[index],(1,X[index].shape[0]) ) ) # 1 row n cols
         else:
-            granules[leaf_index] = np.vstack( (granules[leaf_index],X[index]) )
+            granules[leaf_index] = np.vstack( (granules[leaf_index],X[index]) ) # make a ndarray of all records in a granule
         
         index += 1
 
     print("Added the value")
-    print(granules)
+    # print(granules)
+    print(granules[251])
 
 
 if __name__ == '__main__':
