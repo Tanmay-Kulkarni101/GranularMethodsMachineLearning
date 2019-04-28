@@ -8,20 +8,20 @@ def read_data():
     df = pd.read_csv(file_path,header=None,na_values = missing_values)
 
     # Sanity check
-    print("The Data Head is ")
-    print(df.head())
-    print("The summary of nulls before preprocessing")
-    print(df.isnull().sum())
+    # print("The Data Head is ")
+    # print(df.head())
+    # print("The summary of nulls before preprocessing")
+    # print(df.isnull().sum())
 
     df.fillna(method='ffill',inplace=True)
-    print("After updation")
-    print(df.head())
+    # print("After updation")
+    # print(df.head())
 
     # binning the age data to get ordinal attributes
     
     age_bin = pd.cut(df.loc[:,1],bins=5,labels=range(1, 6), retbins=False,include_lowest=True)
     df.loc[:,1]=age_bin
-    print(df.head())
+    # print(df.head())
 
     return df
 

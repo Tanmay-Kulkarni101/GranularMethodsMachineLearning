@@ -5,20 +5,43 @@ Y which are the labels for each granule
 '''
 
 from sklearn.svm import SVC
+import numpy as np
+import make_granules
 
-## Add definitions for X and Y here
-# X =
-# Y =
-clf = SVC() # using default arguments for SVM
-# C = 1 scaling for the error term
-# Kernel rbf 
+def main():
+	data = make_granules.make_granules(0,None) # Take data from read data
+	svm(data)
 
-# boundry Heuristic? How close is close enough?
-decision_heuristic = 2
-clf.fit(X,Y)
+def svm(data):
+	## Add definitions for X and Y here
+	X = data[0]
+	Y = data[1]
 
-results = clf.decision_function(X)
+	print(" We started with ",X.shape[0])
+	clf = SVC() # using default arguments for SVM
+	# C = 1 scaling for the error term
+	# Kernel rbf 
 
-# should return those values that satisfy the heuristic
-X = X[(results >  decision_heuristic) | (results < - decision_heuristic ) ]
-Y = Y[(results >  decision_heuristic) | (results < - decision_heuristic ) ]
+
+	clf.fit(X,Y)
+
+	results = clf.decision_function(X)
+	indices = []
+	for index in clf.support_ :
+		if Y[index] == 0:
+			indices.append(index)
+	# print("indices are")
+	# print(indices)
+	# print("values are")
+	# print(Y[indices])
+	# print("X has ",X.shape[0] )
+	A = np.delete(X,indices,axis = 0)
+	B = np.delete(Y,indices)
+	# print("Now we have ",A.shape[0])
+
+	print(clf.score(X,Y))
+
+	return [A,B,clf]
+
+if __name__ == "__main__":
+		main()
