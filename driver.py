@@ -10,6 +10,8 @@ from sklearn import tree
 import read_data
 import pandas as pd
 import numpy as np
+from scipy import stats
+
 def main():
     df = read_data.read_data()
     number_of_cols = len(df.columns)
@@ -50,6 +52,18 @@ def main():
     # print(granules)
     print(granules[251])
 
+    info_granules=[]
+
+    # changes made here onwards
+    for key in granules:
+        granule=granules[key]
+        info_granules.append( stats.mode( np.asarray( granule ) )[0] )
+
+        #print(info_granules)
+
+    print('Formed information granules:')
+    print(len(info_granules))
+        
 
 if __name__ == '__main__':
     main()
