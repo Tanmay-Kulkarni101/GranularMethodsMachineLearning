@@ -55,7 +55,7 @@ Results
 We were able to get a perfect classification of the minority class dataset for cancer.  
 ( http://archive.ics.uci.edu/ml/datasets/mammographic+mass )
 
-![Working Example](Isolated.png "Title")
+![Working Example](img.PNG "Working Example")
 
 ## CONCLUSION
 The class imbalance problem is a major problem, that is present within a large number of datasets. This problems cannot be solved by the models alone, thus, we make use of specialized techniques that make the training models immune to these imbalances within the dataset. The technique that we are working on focuses on creating granules of the input data and then running training models, so as to prune borderline cases and improve the performance on the minority class.
