@@ -43,9 +43,8 @@ Return this data along with the corresponding labels
  Run the svm algorithm on the data sent by make_granule and return the decision boundary and support vectors.
 Remove those granules that lie on the decision boundary.
 - driver(): the function that runs all the modules in order.
-Implementation
 
-## Procedure
+## Implementation
 Successfully implemented granularization with the help of decision trees.
 We then chose the mode amongst the points present in the granule.
 We then run svm on the granules.
