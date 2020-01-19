@@ -61,3 +61,7 @@ We were able to get a perfect classification of the minority class dataset for c
 The class imbalance problem is a major problem, that is present within a large number of datasets. This problems cannot be solved by the models alone, thus, we make use of specialized techniques that make the training models immune to these imbalances within the dataset. The technique that we are working on focuses on creating granules of the input data and then running training models, so as to prune borderline cases and improve the performance on the minority class.
 
 This algorithm purposely under fits the data, so that we do not bias based on the majority class. Thus, we may have a lower accuracy overall, but a higher accuracy for the minority class.
+
+## Contact the Authors
+- Tanmay Kulkarni (f20150647@hyderabad.bits-pilani.ac.in)
+- Somya Sharma (f20160216@hyderabad.bits-pilani.ac.in)
