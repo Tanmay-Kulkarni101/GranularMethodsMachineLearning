@@ -50,8 +50,8 @@ We then chose the mode amongst the points present in the granule.
 We then run svm on the granules.
 Remove those granules that lie on the support vector from the majority class.
 Repeat the first three steps till we hit the upper bound on the number of steps or minority class misclassification is 0.
-Results
-We were able to get a perfect classification of the minority class dataset for cancer.  
+
+## Dataset
 ( http://archive.ics.uci.edu/ml/datasets/mammographic+mass )
 
 ![Working Example](img.PNG "Working Example")
