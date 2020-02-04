@@ -1,5 +1,5 @@
 # GranularMethodsMachineLearning
-Implement granular methods in machine learning
+Implement granular methods in machine learning. The purpose for using granular methods is to allow an ordianry classifier such as a support vector machine to deal with highly imbalenced datasets.
 
 ## Description of Dataset
 ### Labels
@@ -45,11 +45,11 @@ Remove those granules that lie on the decision boundary.
 - driver(): the function that runs all the modules in order.
 
 ## Implementation
-Successfully implemented granularization with the help of decision trees.
-We then chose the mode amongst the points present in the granule.
-We then run svm on the granules.
-Remove those granules that lie on the support vector from the majority class.
-Repeat the first three steps till we hit the upper bound on the number of steps or minority class misclassification is 0.
+- Implement granularization with the help of decision trees.
+- Choose the mode amongst the points present in the granule.
+- Run svm on the granules.
+- Remove those granules that lie on the support vector from the majority class.
+- Repeat the first three steps till we hit the upper bound on the number of steps or minority class misclassification is 0.
 
 ## Dataset
 ( http://archive.ics.uci.edu/ml/datasets/mammographic+mass )
@@ -57,9 +57,9 @@ Repeat the first three steps till we hit the upper bound on the number of steps 
 ![Working Example](img.PNG "Working Example")
 
 ## CONCLUSION
-The class imbalance problem is a major problem, that is present within a large number of datasets. This problems cannot be solved by the models alone, thus, we make use of specialized techniques that make the training models immune to these imbalances within the dataset. The technique that we are working on focuses on creating granules of the input data and then running training models, so as to prune borderline cases and improve the performance on the minority class.
+The class imbalance problem is present within a majority of the datasets, as it is higly improbable to expect a balenced distribution of labels within a classificaiton problem. This problems cannot be solved by the Machine Learning Model alone, thus, we make use of specialized techniques that make the training models immune to these imbalances within the dataset. This technique focuses on creating granules of the input data and then runs training models, so as to prune borderline cases and improve the performance on the minority class.
 
-This algorithm purposely under fits the data, so that we do not bias based on the majority class. Thus, we may have a lower accuracy overall, but a higher accuracy for the minority class.
+This algorithm purposely under fits the data, so that we do not bias based on the majority class. Thus, we may have a lower accuracy overall, but a higher accuracy for the minority class. These decision bounderies tend to gerneralize better as they are not biased by the majority class.
 
 ## Contact the Authors
 - Tanmay Kulkarni (f20150647@hyderabad.bits-pilani.ac.in)
