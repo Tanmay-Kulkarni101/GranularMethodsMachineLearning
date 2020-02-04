@@ -1,8 +1,6 @@
 # GranularMethodsMachineLearning
 Implement granular methods in machine learning. The purpose for using granular methods is to allow an ordianry classifier such as a support vector machine to deal with highly imbalenced datasets.
 
-![SVM Boundry Image](600px-SVM_margin.png "SVM")
-
 ## Description of Dataset
 ### Labels
   - Benign=0
@@ -52,6 +50,8 @@ Remove those granules that lie on the decision boundary.
 - Run svm on the granules.
 - Remove those granules that lie on the support vector from the majority class.
 - Repeat the first three steps till we hit the upper bound on the number of steps or minority class misclassification is 0.
+
+![SVM Boundry Image](600px-SVM_margin.png "SVM")
 
 ## Dataset
 ( http://archive.ics.uci.edu/ml/datasets/mammographic+mass )
