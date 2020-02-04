@@ -1,6 +1,8 @@
 # GranularMethodsMachineLearning
 Implement granular methods in machine learning. The purpose for using granular methods is to allow an ordianry classifier such as a support vector machine to deal with highly imbalenced datasets.
 
+![SVM Boundry Image](600px-SVM_margin.png "SVM")
+
 ## Description of Dataset
 ### Labels
   - Benign=0
@@ -61,6 +63,7 @@ The class imbalance problem is present within a majority of the datasets, as it 
 
 This algorithm purposely under fits the data, so that we do not bias based on the majority class. Thus, we may have a lower accuracy overall, but a higher accuracy for the minority class. These decision bounderies tend to gerneralize better as they are not biased by the majority class.
 
+![GSVM in Action](GSVM.gif "GSVM in action")
 ## Contact the Authors
 - Tanmay Kulkarni (f20150647@hyderabad.bits-pilani.ac.in)
 - Somya Sharma (f20160216@hyderabad.bits-pilani.ac.in)
