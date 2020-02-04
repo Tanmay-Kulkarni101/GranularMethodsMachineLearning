@@ -67,3 +67,7 @@ This algorithm purposely under fits the data, so that we do not bias based on th
 ## Contact the Authors
 - Tanmay Kulkarni (f20150647@hyderabad.bits-pilani.ac.in)
 - Somya Sharma (f20160216@hyderabad.bits-pilani.ac.in)
+
+## Citation
+This work is based on the following paper:
+He, Haibo, and Edwardo A. Garcia. "Learning from imbalanced data." IEEE Transactions on knowledge and data engineering 21.9 (2009): 1263-1284.
